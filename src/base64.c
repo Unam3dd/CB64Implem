@@ -2,7 +2,7 @@
 
 uint64_t get_base64_padded_size(uint64_t len)
 {
-    return (((len + 2) / 3) << 2);
+    return (((len | 2) / 3) << 2);
 }
 
 uint64_t get_ascii_size_from_base64(uint64_t len)
